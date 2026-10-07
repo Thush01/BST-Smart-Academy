@@ -1,0 +1,1045 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+:root {
+
+    --ink: #17233c;
+    --muted: #68738a;
+
+    --primary: #5b4bdb;
+    --secondary: #18a999;
+
+    --soft: #f5f6fb;
+    --white: #ffffff;
+
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: var(--ink);
+
+    line-height: 1.6;
+
+    background: white;
+
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.container {
+
+    width: min(1120px, 92%);
+
+    margin: auto;
+
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 10;
+
+    background: rgba(255,255,255,0.96);
+
+    border-bottom: 1px solid #eeeeee;
+
+}
+
+
+.nav {
+
+    height: 72px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.logo {
+
+    font-size: 21px;
+
+    font-weight: 800;
+
+}
+
+
+.logo span {
+
+    color: var(--primary);
+
+}
+
+
+nav {
+
+    display: flex;
+
+    gap: 28px;
+
+    font-weight: 600;
+
+    color: #4d5870;
+
+}
+
+
+nav a:hover {
+
+    color: var(--primary);
+
+}
+
+
+.menu-btn {
+
+    display: none;
+
+    border: none;
+
+    background: none;
+
+    font-size: 25px;
+
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+
+    background:
+        linear-gradient(
+            135deg,
+            #f5f4ff,
+            #eefaf8
+        );
+
+    padding: 90px 0 75px;
+
+}
+
+
+.hero-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1.15fr
+        0.85fr;
+
+    gap: 65px;
+
+    align-items: center;
+
+}
+
+
+.eyebrow {
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    font-weight: 800;
+
+    color: var(--primary);
+
+    margin-bottom: 12px;
+
+}
+
+
+h1 {
+
+    font-size:
+        clamp(44px, 6vw, 72px);
+
+    line-height: 1.05;
+
+    margin-bottom: 22px;
+
+}
+
+
+h1 span {
+
+    color: var(--primary);
+
+}
+
+
+.hero-text {
+
+    font-size: 18px;
+
+    color: var(--muted);
+
+    max-width: 650px;
+
+}
+
+
+.buttons {
+
+    display: flex;
+
+    gap: 14px;
+
+    margin: 30px 0;
+
+}
+
+
+.btn {
+
+    display: inline-block;
+
+    border-radius: 10px;
+
+    padding: 13px 23px;
+
+    font-weight: 800;
+
+    border: 2px solid transparent;
+
+    cursor: pointer;
+
+    text-align: center;
+
+}
+
+
+.primary {
+
+    background: var(--primary);
+
+    color: white;
+
+}
+
+
+.primary:hover {
+
+    opacity: .9;
+
+}
+
+
+.secondary {
+
+    border-color: #d7d9e6;
+
+    color: var(--ink);
+
+    background: white;
+
+}
+
+
+.trust {
+
+    display: flex;
+
+    gap: 35px;
+
+    margin-top: 30px;
+
+}
+
+
+.trust div {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.trust strong {
+
+    font-size: 18px;
+
+}
+
+
+.trust small {
+
+    color: var(--muted);
+
+}
+
+
+/* ================= HERO CARD ================= */
+
+.hero-card {
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+
+.screen {
+
+    background: white;
+
+    width: min(420px,100%);
+
+    padding: 25px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 25px 60px
+        rgba(37,37,85,.15);
+
+    transform: rotate(2deg);
+
+}
+
+
+.dots {
+
+    font-size: 10px;
+
+    color: #aaa;
+
+}
+
+
+.screen-title {
+
+    font-size: 24px;
+
+    font-weight: 800;
+
+    margin: 22px 0;
+
+}
+
+
+.lesson {
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    background: #f2f1ff;
+
+    font-size: 18px;
+
+}
+
+
+.lesson span {
+
+    font-size: 13px;
+
+    color: var(--muted);
+
+}
+
+
+.mini-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 12px;
+
+    margin-top: 14px;
+
+}
+
+
+.mini-grid div {
+
+    padding: 17px;
+
+    background: var(--soft);
+
+    border-radius: 13px;
+
+    font-size: 22px;
+
+}
+
+
+.mini-grid b {
+
+    display: block;
+
+    font-size: 13px;
+
+    margin-top: 5px;
+
+}
+
+
+/* ================= SECTIONS ================= */
+
+.section {
+
+    padding: 90px 0;
+
+}
+
+
+.light {
+
+    background: var(--soft);
+
+}
+
+
+.section-heading {
+
+    text-align: center;
+
+    max-width: 700px;
+
+    margin:
+        0 auto
+        45px;
+
+}
+
+
+.section-heading h2,
+.about h2,
+.contact h2 {
+
+    font-size: 38px;
+
+    line-height: 1.15;
+
+    margin-bottom: 12px;
+
+}
+
+
+.section-heading p:last-child,
+.about p,
+.contact p {
+
+    color: var(--muted);
+
+}
+
+
+/* ================= SUBJECT CARDS ================= */
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 20px;
+
+}
+
+
+.card {
+
+    padding: 28px;
+
+    background: white;
+
+    border:
+        1px solid
+        #e9eaf0;
+
+    border-radius: 17px;
+
+    transition:
+        transform .2s,
+        box-shadow .2s;
+
+}
+
+
+.card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(30,40,80,.1);
+
+}
+
+
+.icon {
+
+    font-size: 30px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.card h3 {
+
+    margin-bottom: 6px;
+
+}
+
+
+.card p {
+
+    color: var(--muted);
+
+}
+
+
+/* ================= PRICING ================= */
+
+.pricing {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 22px;
+
+}
+
+
+.price-card {
+
+    position: relative;
+
+    background: white;
+
+    border:
+        1px solid
+        #e3e4eb;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+}
+
+
+.price-card.featured {
+
+    border:
+        2px solid
+        var(--primary);
+
+    transform:
+        translateY(-8px);
+
+}
+
+
+.badge {
+
+    position: absolute;
+
+    right: 18px;
+
+    top: 18px;
+
+    font-size: 10px;
+
+    background: var(--primary);
+
+    color: white;
+
+    padding: 5px 8px;
+
+    border-radius: 20px;
+
+    font-weight: 800;
+
+}
+
+
+.price {
+
+    font-size: 27px;
+
+    font-weight: 800;
+
+    margin: 15px 0;
+
+}
+
+
+.price span {
+
+    font-size: 13px;
+
+    color: var(--muted);
+
+    font-weight: 400;
+
+}
+
+
+.price-card ul {
+
+    list-style: none;
+
+    color: var(--muted);
+
+    margin: 20px 0;
+
+}
+
+
+.price-card li {
+
+    margin: 9px 0;
+
+}
+
+
+.price-card li::before {
+
+    content: "✓ ";
+
+    color: var(--secondary);
+
+    font-weight: 800;
+
+}
+
+
+.full {
+
+    width: 100%;
+
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+
+    display: grid;
+
+    grid-template-columns:
+        .8fr 1.2fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+
+.about-visual {
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+
+.circle {
+
+    width: 270px;
+
+    height: 270px;
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #5b4bdb,
+            #18a999
+        );
+
+    color: white;
+
+    font-size: 42px;
+
+    font-weight: 900;
+
+    line-height: 1;
+
+}
+
+
+.circle small {
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    line-height: 1.5;
+
+    margin-top: 10px;
+
+}
+
+
+.check-list {
+
+    margin-top: 22px;
+
+}
+
+
+.check-list p {
+
+    margin: 10px 0;
+
+    font-weight: 700;
+
+    color: var(--ink);
+
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact-section {
+
+    background: #17233c;
+
+    color: white;
+
+}
+
+
+.contact {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 60px;
+
+    align-items: start;
+
+}
+
+
+.contact .eyebrow {
+
+    color: #9c91ff;
+
+}
+
+
+.contact h2 {
+
+    color: white;
+
+}
+
+
+.contact p {
+
+    color: #c8cede;
+
+}
+
+
+.contact form {
+
+    background: white;
+
+    padding: 28px;
+
+    border-radius: 18px;
+
+}
+
+
+.contact input,
+.contact textarea {
+
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border:
+        1px solid
+        #dddfe7;
+
+    border-radius: 9px;
+
+    margin-bottom: 12px;
+
+    font: inherit;
+
+}
+
+
+.form-message {
+
+    font-size: 13px !important;
+
+    margin-top: 10px !important;
+
+    color:
+        var(--secondary)
+        !important;
+
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+
+    background: #101a2c;
+
+    color: #cbd1df;
+
+    padding:
+        35px 0
+        20px;
+
+}
+
+
+.footer {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+}
+
+
+.footer strong {
+
+    color: white;
+
+    font-size: 18px;
+
+}
+
+
+.footer p {
+
+    margin-top: 4px;
+
+}
+
+
+.footer div:last-child {
+
+    display: flex;
+
+    gap: 22px;
+
+}
+
+
+.copyright {
+
+    text-align: center;
+
+    font-size: 12px;
+
+    margin-top: 28px;
+
+    color: #8e98ad;
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:800px) {
+
+    nav {
+
+        display: none;
+
+        position: absolute;
+
+        top: 72px;
+
+        left: 0;
+
+        right: 0;
+
+        background: white;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        border-bottom:
+            1px solid
+            #eee;
+
+    }
+
+
+    .nav.open nav {
+
+        display: flex;
+
+    }
+
+
+    .menu-btn {
+
+        display: block;
+
+    }
+
+
+    .hero-grid,
+    .about,
+    .contact {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .hero {
+
+        padding-top: 60px;
+
+    }
+
+
+    .cards,
+    .pricing {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .price-card.featured {
+
+        transform: none;
+
+    }
+
+
+    .trust {
+
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .section {
+
+        padding: 65px 0;
+
+    }
+
+
+    .about-visual {
+
+        order: 2;
+
+    }
+
+
+    .contact {
+
+        gap: 35px;
+
+    }
+
+
+    .footer {
+
+        flex-direction: column;
+
+    }
+
+
+    .footer div:last-child {
+
+        flex-wrap: wrap;
+
+    }
+
+}
+/* ================= CONTACT DETAILS ================= */
+
+.contact-details {
+    margin-top: 28px;
+}
+
+.contact-details p {
+    margin-bottom: 6px;
+}
+
+.contact-details a {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.contact-details .whatsapp-link {
+    display: inline-block;
+    padding: 11px 17px;
+    border-radius: 9px;
+    background: #18a999;
+    color: white;
+    font-size: 14px;
+}
+
+.contact-details .whatsapp-link:hover {
+    opacity: 0.9;
+}
